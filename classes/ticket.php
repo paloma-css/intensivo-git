@@ -4,10 +4,7 @@ namespace Paloma\Ticket;
 
 class Ticket 
 {
-    public function __construct()
-    {
-    }
-
+   
     public function calculate()
     {
         try {
