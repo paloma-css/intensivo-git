@@ -25,9 +25,8 @@ class Ticket
             $candidates = array_diff($this->numbers, $fixedNumbers);
             $myFixedNUmberSize = count($fixedNumbers);
             shuffle($candidates);
-            $numberDrawSize = $ticketRangeSize - $myFixedNUmberSize;
+            $numberDrawnSize = $ticketRangeSize - $myFixedNUmberSize;
             $numbersDrawn = array_slice($candidates,0, $numberDrawSize);
-            
             $resultSet= array_merge($numbersDrawn, $fixedNumbers);
             sort($resultSet);
             return $resultSet;
