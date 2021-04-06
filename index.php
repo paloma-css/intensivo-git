@@ -7,9 +7,14 @@ use Classes\Ticket;
 try{
     $ticket = new Ticket();
     $ticket->calculate();
-    echo "<br>";
-    print_r($ticket->generateTicket([25,23],6));
     
+    $loop = range(1, 6);
+
+    foreach($loop as $k){
+    echo "<br>";
+    print_r($ticket->generateTicket([15,30],6));
+    }
+
 }catch(\Exception $e){
     echo $e->getMessage();
 }

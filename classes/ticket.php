@@ -19,14 +19,14 @@ class Ticket
         }
     }
 
-    public function generateTicket($fixedNumbers = [], $ticketRangeSize)
+    public function generateTicket($fixedNumbers = [], $ticketRangeSize = 6)
     {
         try {
             $candidates = array_diff($this->numbers, $fixedNumbers);
             $myFixedNUmberSize = count($fixedNumbers);
             shuffle($candidates);
             $numberDrawnSize = $ticketRangeSize - $myFixedNUmberSize;
-            $numbersDrawn = array_slice($candidates,0, $numberDrawSize);
+            $numbersDrawn = array_slice($candidates,0, $numberDrawnSize);
             $resultSet= array_merge($numbersDrawn, $fixedNumbers);
             sort($resultSet);
             return $resultSet;
